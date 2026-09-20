@@ -182,16 +182,6 @@ Trained model checkpoints are hosted on the Hugging Face Hub:
 | **DINOv3 ViT-B/16** | 86M | 87.43% | [Download Weights](https://huggingface.co/) |
 | **DINOv3 ViT-H+/16** | 840M | 89.18% | [Download Weights](https://huggingface.co/) |
 | **DINOv3 ViT+ConvNeXt (SOTA)** | 6,914M | **91.04%** | [Download Weights](https://huggingface.co/) |
-
-To upload your own trained checkpoint to Hugging Face Hub:
-```bash
-# 1. Convert checkpoint to safetensors:
-python tools/export_weights.py --checkpoint checkpoints/model-9.pth --output-dir ./exported_model
-
-# 2. Upload to Hugging Face:
-python tools/upload_to_hf.py --repo-id imtiendat0311/coral-dinov3-vit-convnext
-```
-
 ---
 
 ## 📖 Citation

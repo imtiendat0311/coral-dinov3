@@ -19,6 +19,9 @@ logs/
 wandb/
 runs/
 
+# Internal Release Tools
+tools/upload_to_hf.py
+
 # Large Datasets & Mosaic Tiling Cache
 data/
 datasets/
