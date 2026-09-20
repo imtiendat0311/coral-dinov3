@@ -1,0 +1,21 @@
+{
+  "output_dir": "./runs",
+  "output_dir_name": "exp_coral_convnext_vit",
+  "train_path": "./data/train.csv",
+  "val_path": "./data/val.csv",
+  "test_path": "./data/test.csv",
+  "num_class": 27,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "learning_rate": 0.0001,
+  "save_model": true,
+  "save_every": 1,
+  "latent_dim": 512,
+  "dropout_rate": 0.5,
+  "mlp": [
+    [1024, 512, "BATCHNORM", "RELU", "DROP 0.5"],
+    [512, 256, "BATCHNORM", "RELU", "DROP 0.5"],
+    [256, 128, "BATCHNORM", "RELU", "DROP 0.5"],
+    [128, 27]
+  ]
+}

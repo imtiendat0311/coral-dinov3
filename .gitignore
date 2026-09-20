@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Checkpoints & Weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+output*/
+checkpoints/
+*.npz
+
+# Logs & Monitoring
+logs/
+*.log
+wandb/
+runs/
+
+# Large Datasets & Mosaic Tiling Cache
+data/
+datasets/
+crop_tiles/
+tile_masks/
+masks_overlay/
+mask_jsons/
+local_inf/
+train_model/
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+!assets/*.png
+!assets/*.jpg
+
+# Virtual Environments
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
