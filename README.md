@@ -106,7 +106,7 @@ The **GV3 dataset** contains **78,012 images** across **27 Caribbean coral speci
 ### 1. Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/coral-dinov3.git
+git clone https://github.com/imtiendat0311/coral-dinov3.git
 cd coral-dinov3
 pip install -r requirements.txt
 pip install -e .
@@ -135,7 +135,7 @@ Classify a single coral photo or an entire folder of cropped patches:
 python infer.py --image samples/coral.jpg --checkpoint checkpoints/model-9.pth
 
 # Using Hugging Face Hub (automatic weight download):
-python infer.py --image samples/coral.jpg --hf-repo YOUR_USERNAME/coral-dinov3-vit-convnext
+python infer.py --image samples/coral.jpg --hf-repo imtiendat0311/coral-dinov3-vit-convnext
 
 # Dry-run test with mock backbones:
 python infer.py --image samples/coral.jpg --mock --topk 5
@@ -189,7 +189,7 @@ To upload your own trained checkpoint to Hugging Face Hub:
 python tools/export_weights.py --checkpoint checkpoints/model-9.pth --output-dir ./exported_model
 
 # 2. Upload to Hugging Face:
-python tools/upload_to_hf.py --repo-id YOUR_USERNAME/coral-dinov3-vit-convnext
+python tools/upload_to_hf.py --repo-id imtiendat0311/coral-dinov3-vit-convnext
 ```
 
 ---

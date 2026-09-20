@@ -4,7 +4,7 @@ Standby Tool: Upload Exported Model to Hugging Face Hub
 Creates the model repository and uploads model.safetensors, config.json, and the Model Card.
 
 Usage:
-    python tools/upload_to_hf.py --repo-id YOUR_USERNAME/coral-convnext-vit
+    python tools/upload_to_hf.py --repo-id imtiendat0311/coral-dinov3-vit-convnext
 """
 
 import os
@@ -39,7 +39,7 @@ Official model weights for the paper:
 
 ## Usage via Official GitHub Repository
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/coral-dinov3.git
+git clone https://github.com/imtiendat0311/coral-dinov3.git
 cd coral-dinov3
 pip install -r requirements.txt
 
