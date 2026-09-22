@@ -11,7 +11,12 @@ This is the official codebase for the paper:
 **"Robust In-Situ Coral Image Classification with a DINOv3 Hybrid Vision Architecture"**  
 *Dat Nguyen, Minh Tran, Denton Bobeldyk, Jonathan P. Leidig*  
 **Grand Valley State University**, Allendale, MI, United States  
-📬 Contact: `nguyedat@mail.gvsu.edu`, `tranmq@mail.gvsu.edu`
+
+### 📬 Contacts & Authors
+* **Dat Nguyen** (`nguyedat@mail.gvsu.edu`)
+* **Minh Tran** (`tranmq@mail.gvsu.edu`)
+* **Prof. Denton Bobeldyk** (`bobeldyd@gvsu.edu`)
+* **Prof. Jonathan P. Leidig** (`leidijon@gvsu.edu`)
 
 ---
 
@@ -200,6 +205,7 @@ If you use this model, code, or the GV3 benchmark in your research, please cite 
 
 ---
 
-## 📄 License
+## 📄 License & Copyright
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+Copyright (c) 2026 Dat Nguyen, Minh Tran, Denton Bobeldyk, Jonathan P. Leidig (Grand Valley State University).

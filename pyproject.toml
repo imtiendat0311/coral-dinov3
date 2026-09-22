@@ -7,7 +7,12 @@ name = "coral-clf"
 version = "0.1.0"
 description = "SOTA Coral Image Classification and TagLab Mosaic Segmentation using ConvNextVIT and SAM3"
 readme = "README.md"
-authors = [{ name = "Dat Nguyen" }]
+authors = [
+    { name = "Dat Nguyen", email = "nguyedat@mail.gvsu.edu" },
+    { name = "Minh Tran", email = "tranmq@mail.gvsu.edu" },
+    { name = "Denton Bobeldyk", email = "bobeldyd@gvsu.edu" },
+    { name = "Jonathan P. Leidig", email = "leidijon@gvsu.edu" },
+]
 license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
