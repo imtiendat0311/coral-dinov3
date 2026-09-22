@@ -4,7 +4,8 @@
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg" alt="PyTorch"></a>
   <a href="https://huggingface.co/"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow.svg" alt="Hugging Face"></a>
   <a href="https://github.com/facebookresearch/dinov3"><img src="https://img.shields.io/badge/Backbone-Meta%20DINOv3-black" alt="Meta DINOv3"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Code%20License-MIT-blue.svg" alt="Code License: MIT"></a>
+  <a href="https://github.com/facebookresearch/dinov3/blob/main/LICENSE"><img src="https://img.shields.io/badge/Backbone%20License-Meta%20DINOv3-orange.svg" alt="Backbone License"></a>
 </p>
 
 This is the official codebase for the paper:  
@@ -207,5 +208,6 @@ If you use this model, code, or the GV3 benchmark in your research, please cite 
 
 ## 📄 License & Copyright
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
-Copyright (c) 2026 Dat Nguyen, Minh Tran, Denton Bobeldyk, Jonathan P. Leidig (Grand Valley State University).
+* **Codebase & Classification Head**: Licensed under the [MIT License](LICENSE).  
+  Copyright (c) 2026 Dat Nguyen, Minh Tran, Denton Bobeldyk, Jonathan P. Leidig (Grand Valley State University).
+* **Foundation Backbones & Weights**: The DINOv3 Vision Transformer (`dinov3_vit7b16`) and ConvNeXt-Large (`dinov3_convnext_large`) encoders were developed by Meta AI and are subject to the [Meta DINOv3 License](https://github.com/facebookresearch/dinov3/blob/main/LICENSE). Users of the model weights must adhere to Meta's license terms and trade controls.
