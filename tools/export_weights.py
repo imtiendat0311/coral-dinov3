@@ -54,9 +54,9 @@ def main():
     else:
         state_dict = ckpt
 
-    # Clean DDP module. prefixes
+    # Clean DDP module. prefixes and unshare aliased memory
     clean_dict = {
-        (k[7:] if k.startswith("module.") else k): v.contiguous()
+        (k[7:] if k.startswith("module.") else k): v.clone().contiguous()
         for k, v in state_dict.items()
     }
 
