@@ -51,9 +51,17 @@ def main():
     class_labels = load_class_labels(classes_json_path=labels_file)
 
     # 2. Build model
+    ckpt_path = args.checkpoint
+    if not ckpt_path and not args.hf_repo and not args.mock:
+        for candidate in ["model-9.pth", "checkpoints/model-9.pth"]:
+            if os.path.exists(candidate):
+                ckpt_path = candidate
+                print(f"[INFO] Auto-detected local checkpoint: {ckpt_path}")
+                break
+
     print(f"[INFO] Initializing model on device: {args.device}...")
     model, _ = build_coral_classifier(
-        checkpoint_path=args.checkpoint,
+        checkpoint_path=ckpt_path,
         hf_repo_id=args.hf_repo,
         device=args.device,
         use_mock_backbones=args.mock,

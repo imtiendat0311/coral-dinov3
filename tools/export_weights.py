@@ -15,19 +15,31 @@ from safetensors.torch import save_file
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Export checkpoint to safetensors & config.json")
-    parser.add_argument("--checkpoint", "-c", type=str, default="train_model/output_27/checkpoints/model-9.pth", help="Path to input .pth checkpoint")
+    parser.add_argument("--checkpoint", "-c", type=str, default=None, help="Path to input .pth checkpoint")
     parser.add_argument("--output-dir", "-o", type=str, default="./exported_model", help="Directory to save exported model")
     parser.add_argument("--classes", type=str, default="classes.json", help="Path to classes.json")
     return parser.parse_args()
 
 def main():
     args = parse_args()
-    if not os.path.exists(args.checkpoint):
-        raise FileNotFoundError(f"Checkpoint not found at: {args.checkpoint}")
+
+    # Auto-detect checkpoint path if not provided
+    ckpt_path = args.checkpoint
+    if not ckpt_path:
+        for candidate in ["model-9.pth", "checkpoints/model-9.pth", "train_model/output_27/checkpoints/model-9.pth"]:
+            if os.path.exists(candidate):
+                ckpt_path = candidate
+                break
+
+    if not ckpt_path or not os.path.exists(ckpt_path):
+        raise FileNotFoundError(
+            f"Checkpoint not found. Searched candidate paths ('model-9.pth', 'checkpoints/model-9.pth'). "
+            f"Please specify using --checkpoint <path>"
+        )
 
     os.makedirs(args.output_dir, exist_ok=True)
-    print(f"[INFO] Loading checkpoint: {args.checkpoint}")
-    ckpt = torch.load(args.checkpoint, map_location="cpu")
+    print(f"[INFO] Loading checkpoint: {ckpt_path}")
+    ckpt = torch.load(ckpt_path, map_location="cpu")
 
     # Extract state_dict
     if isinstance(ckpt, dict):
